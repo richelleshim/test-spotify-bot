@@ -6,9 +6,9 @@ import Sidebar from "@/components/Sidebar";
 import AddButton from "@/components/buttons/AddButton";
 import AddProjectButton from "@/components/buttons/AddButton";
 import SortButton from "@/components/buttons/SortButton";
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+const Projects = () => {
   return (
     <section className="flex bg-zinc">
       <Sidebar />
@@ -19,11 +19,12 @@ export default function Home() {
         </div>
         <div className="mt-10 bg-zinc flex items-center justify-between w-full font-bold border">
           <HeaderBoxTemplate title="My Projects" />
-          <SortButton header="project" />
+          <SortButton header="project"  />
         </div>
         <ProjectGridDisplay />
       </div>
       <RightSideBar />
     </section>
   );
-}
+};
+export default Projects;

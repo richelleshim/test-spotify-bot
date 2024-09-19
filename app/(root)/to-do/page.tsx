@@ -1,29 +1,29 @@
 import HeaderBoxTemplate from "@/components/HeaderBoxTemplate";
-import ProjectGridDisplay from "@/components/ProjectGridDisplay";
-import RightSideBar from "@/components/RightSideBar";
 import SearchBar from "@/components/SearchBar";
 import Sidebar from "@/components/Sidebar";
+import Tasks from "@/components/Tasks";
 import AddButton from "@/components/buttons/AddButton";
 import AddProjectButton from "@/components/buttons/AddButton";
 import SortButton from "@/components/buttons/SortButton";
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+const ToDo = () => {
   return (
     <section className="flex bg-zinc">
       <Sidebar />
       <div className="flex-col mt-6 home-content">
         <div className="flex justify-between">
           <SearchBar />
-          <AddButton header="project" />
+          <AddButton header="todo" />
         </div>
-        <div className="mt-10 bg-zinc flex items-center justify-between w-full font-bold border">
-          <HeaderBoxTemplate title="My Projects" />
-          <SortButton header="project" />
+        <div className="mt-10 bg-zinc flex items-center justify-between ml-2 w-full font-bold">
+          <HeaderBoxTemplate title="Tasks" />
+          <SortButton header="todo" />
         </div>
-        <ProjectGridDisplay />
+        <Tasks />
       </div>
-      <RightSideBar />
     </section>
   );
-}
+};
+
+export default ToDo;
